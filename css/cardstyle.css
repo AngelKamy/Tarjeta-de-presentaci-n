@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+:root {
+    --mi-gris: #ACB2B4;
+    --sombra-caja: rgba(73, 69, 52, 0.4);
+    --sombra-foto: rgba(0, 0, 0, 0.8);
+    --mi-azul: #002b7a;
+    --mi-dorado: #d59f0f;
+    --pestaña-gris: rgba(155,155,155,0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--mi-gris);
+
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 490px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px;
+}
+
+.card .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    background: whitesmoke;
+}
+
+.card .content .img {
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.card .content .img img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px var(--sombra-foto);
+}
+
+.card .content span {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    background: linear-gradient(to right, var(--mi-azul), var(--mi-dorado));
+    transform: rotate(-35deg);
+    top: -50px;
+    left: -100px;
+}
+
+.card .content h4 {
+    font-size: 18px;
+    color: #1a1919;
+    margin: 5px;
+}
+
+.card .content h6 {
+    font-size: 13px;
+    color: var(--mi-azul);
+}
+
+.card .content p {
+    font-size: 13px;
+    color: #1a1919;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+.card .content a button{
+    width: 157.5px;
+    height: 35px;
+    border-radius:10px;
+    margin: 5px 0 8px ;
+    background: var(--mi-dorado);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .content a button i{
+    margin-right: 5px;
+color: var(--sombra-caja);
+}
+
+.card .content a img {
+    margin: 0 0 20px;
+    width: 75%;
+}
+
+
+.card .links {
+    position: absolute;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(245,245,245,0.7);
+    box-shadow: 2px 3px 5px rgba(73,69,52,0.4);
+    padding: 20px;
+    align-items: center;
+    right: 10px;
+    top: 15px;
+    display: none;
+}
+
+.card:hover .links{
+    transition: 5s;
+    right: -50px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+}
+
+.card .links a{
+    font-size: 15px;
+    color: var(--pestaña-gris);
+}
+
+.card .links a:hover:nth-child(1){
+    transform: scale(1.2);
+    color: var(--mi-dorado);
+}
+.card .links a:hover:nth-child(2){
+    transform: scale(1.2);
+    color: var(--mi-dorado);
+}
+.card .links a:hover:nth-child(3){
+    transform: scale(1.2);
+    color: var(--mi-dorado);
+}
+.card .links a:hover:nth-child(4){
+    transform: scale(1.2);
+    color: var(--mi-dorado);
+}
